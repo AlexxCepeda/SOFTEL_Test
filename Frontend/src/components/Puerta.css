@@ -1,0 +1,102 @@
+.puerta-comp {
+    padding: 2rem;
+    background-color: rgb(31, 31, 31);
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.puerta__sets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4rem;
+}
+
+
+.puerta {
+    position: relative;
+    width: 150px;
+    height: 250px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+.puerta-front {
+    width: 150px;
+    height: 250px;
+    transform-origin: left;
+    position: absolute;
+    background-color: #8B4513;
+    z-index: 1;
+    transition: .5s;
+}
+
+.manija {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #f1c83c;
+}
+
+.activa .puerta-front {
+    transform: rotateY(-160deg);
+}
+
+.fondo-puerta {
+    position: relative;
+    background: #c18080;
+    width: 100%;
+    height: 100%;
+    outline: thick double #d8b68f;
+}
+
+button {
+    margin: 1rem 0;
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #40005d;
+    background-color: #7e8564;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+    height: 5rem;
+}
+
+.puerta__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 767px) {
+    .puerta-comp {
+        flex-direction: column;
+    }
+
+    .puerta__sets {
+        flex-direction: column;
+    }
+
+    .puerta {
+        scale: 0.75;
+    }
+
+    .puerta__actions button {
+        margin: 1rem 0;
+    }
+}
