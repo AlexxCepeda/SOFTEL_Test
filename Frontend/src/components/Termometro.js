@@ -27,7 +27,7 @@ function Termometro() {
         let time = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
         const jsonText = {
             objeto: "termometro",
-            valor: push ? 1 : 0,
+            valor: push ? 0 : 1,
             agregado: time
         }
         axios.post("http://localhost:8800/", jsonText).then(response => console.log(response))
