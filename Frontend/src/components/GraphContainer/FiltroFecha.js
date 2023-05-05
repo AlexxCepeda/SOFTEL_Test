@@ -7,8 +7,8 @@ const FiltroFecha = (props) => {
         props.onDateSelected(e.target.value);
     }
     return (
-        <div className='expenses-filter'>
-            <div className='expenses-filter__control'>
+        <div className='date-filter'>
+            <div className='date-filter__control'>
                 <label>Filtrar por tiempo</label>
                 <select value={props.selectedDate} onChange={filterHandler}>
                     <option value='Todos'>Todos los registros</option>
